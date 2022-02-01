@@ -12,3 +12,27 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+//--------------ОСНОВНОЙ КОД-----------------
+
+const listItemEl = document.querySelector('ul.gallery')
+
+const imgEl = images.map(img =>{
+  return `<li><img src="${img.url}" alt="${img.alt}" width=300 height = 225></li>`
+}).join("");
+
+
+listItemEl.insertAdjacentHTML("beforeend",imgEl)
+
+//-----------------GRID ОТСТУПЫ-----------------
+
+listItemEl.style.display = "grid";
+listItemEl.style.gridTemplateColumns = "repeat(4, 1fr)";
+listItemEl.style.gap = "30px"
+
+//-----------------CSS STYLE BORDER-----------------
+const itemCssStyle = document.querySelectorAll('li')
+
+
+itemCssStyle.forEach(bord=>{
+  bord.style.border ="dashed 10px orange"
+})
