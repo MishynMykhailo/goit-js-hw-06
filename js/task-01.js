@@ -1,49 +1,8 @@
-const ulCategoriesEl = document.querySelector("#categories");
+const categoriesLiEl = document.querySelectorAll('.item')
 
-const allLiEl = ulCategoriesEl.children.length;
+console.log(`Number of categories:`, categoriesLiEl.length)
 
-console.log(`Number of categories:`,allLiEl); // Number of categories: 3
-
-///////////////////////////////////////////////////////////////////////////////////////
-const CategoryAnEl = ulCategoriesEl.firstElementChild.children[0].textContent;
-
-const AnimalLiEl = ulCategoriesEl.firstElementChild.children[1].children.length;
-
-console.log(`Category:`, CategoryAnEl); // Category: Animals
-
-console.log(`Elements:`,AnimalLiEl); // Elements: 4
-
-///////////////////////////////////////////////////////////////////////////////////////
-const CategoryPrEl = ulCategoriesEl.children[1].children[0].textContent;
-
-const ProductLiEl = ulCategoriesEl.children[1].children[1].children.length;
-
-console.log(`Category:`, CategoryPrEl); // Category: Products
-
-console.log(`Elements:`,ProductLiEl); // Elements: 3
-
-/////////////////////////////////////////////////////////////////////////////////////////
-const CategoryTechEl = ulCategoriesEl.lastElementChild.children[0].textContent;
-
-// Решил сделать тут через querySelectorAll , раз предыдушие сделал по DOM разметке
-const TechLiEl = ulCategoriesEl.querySelectorAll('li.item');
-
-console.log(`Category:`,CategoryTechEl ); // Category: Technologies
-
-console.log(`Elements:`,TechLiEl[2].children[1].children.length); // Elements: 5
-
-////////////////////////////////////////////////////////////////////
-const ulCategoriesEl = document.querySelector("#categories");
-ulCategoriesEl.children.forEach(child=>{
-    console.log(child)
+categoriesLiEl.forEach(categor=>{
+   console.log('Category',categor.firstElementChild.textContent) 
+   console.log('Elements',categor.lastElementChild.children.length) 
 })
-//------------------------ Или вот так ----------------------------------
-
-// const categoriesLiEl = document.querySelectorAll('.item')
-
-// console.log(`Number of categories:`, categoriesLiEl.length)
-
-// categoriesLiEl.forEach(categor=>{
-//    console.log('Category',categor.firstElementChild.textContent) 
-//    console.log('Elements',categor.lastElementChild.children.length) 
-// })
