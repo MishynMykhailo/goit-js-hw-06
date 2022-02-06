@@ -22,3 +22,22 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+/* Start - task №3*/
+img {
+  display: block;
+  max-width: 100%;
+  height: 200px;
+}
+li{
+  list-style: none;
+}
+.taskthree{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px
+}
+.taskthree-border {
+  width: 300px;
+  border: dashed 5px orange;
+}
+/* End -  task №3*/

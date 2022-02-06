@@ -17,7 +17,7 @@ const images = [
 const listItemEl = document.querySelector('ul.gallery')
 
 const imgEl = images.map(img =>{
-  return `<li><img src="${img.url}" alt="${img.alt}" width=300 height = 225></li>`
+  return `<li><img src="${img.url}" alt="${img.alt}" width="300" </li>`
 }).join("");
 
 
@@ -25,14 +25,11 @@ listItemEl.insertAdjacentHTML("beforeend",imgEl)
 
 //-----------------GRID ОТСТУПЫ-----------------
 
-listItemEl.style.display = "grid";
-listItemEl.style.gridTemplateColumns = "repeat(4, 1fr)";
-listItemEl.style.gap = "30px"
+listItemEl.classList.add('taskthree')
 
 //-----------------CSS STYLE BORDER-----------------
-const itemCssStyle = document.querySelectorAll('li')
+const itemCssStyleLi = document.querySelectorAll('li')
 
-
-itemCssStyle.forEach(bord=>{
-  bord.style.border ="dashed 10px orange"
+itemCssStyleLi.forEach((bord)=>{
+  bord.classList.add("taskthree-border")
 })

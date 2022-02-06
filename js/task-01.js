@@ -33,4 +33,17 @@ console.log(`Category:`,CategoryTechEl ); // Category: Technologies
 console.log(`Elements:`,TechLiEl[2].children[1].children.length); // Elements: 5
 
 ////////////////////////////////////////////////////////////////////
+const ulCategoriesEl = document.querySelector("#categories");
+ulCategoriesEl.children.forEach(child=>{
+    console.log(child)
+})
+//------------------------ Или вот так ----------------------------------
 
+// const categoriesLiEl = document.querySelectorAll('.item')
+
+// console.log(`Number of categories:`, categoriesLiEl.length)
+
+// categoriesLiEl.forEach(categor=>{
+//    console.log('Category',categor.firstElementChild.textContent) 
+//    console.log('Elements',categor.lastElementChild.children.length) 
+// })
