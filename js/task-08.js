@@ -17,14 +17,14 @@ form.addEventListener('submit',submitLog);
 
 function submitLog (event){
     event.preventDefault();
-    if (event.currentTarget.elements.email.value === "" || event.currentTarget.elements.password.value === ""){
+    const {
+        elements: { email, password },
+      } = event.currentTarget;
+    if (email.value === "" || password.value === ""){
        alert("Заполни поля нормально")
     }else {
-        const formData = new FormData(event.currentTarget)
-        
-        formData.forEach((value,name)=>{
-            console.log({name,value})
-        })
-        form.reset();
+        console.log({email: email.value, password: password.value});
+  event.currentTarget.reset();
+
     }
 }
